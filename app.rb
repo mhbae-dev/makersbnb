@@ -9,7 +9,15 @@ class MakersBnb < Sinatra::Base
   end
 
   get '/' do
-    'Hello World'
+    erb(:sign_up)
+  end
+
+  get '/login' do
+    erb(:login)
+  end
+
+  get '/spaces/new' do
+    erb(:'spaces/new')
   end
 
   run! if app_file == $PROGRAM_NAME
