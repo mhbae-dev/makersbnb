@@ -1,7 +1,11 @@
 {
   "RSpec": {
     "coverage": {
+<<<<<<< HEAD
       "/mnt/c/Users/mhbae/Desktop/Myoung-Dev/Makers/makersbnb/app.rb": {
+=======
+      "/home/madihah/Coding/Makers/makersbnb/app.rb": {
+>>>>>>> origin/main
         "lines": [
           null,
           null,
@@ -14,14 +18,30 @@
           null,
           null,
           1,
+<<<<<<< HEAD
           3,
           null,
           null,
           1,
+=======
           1,
           null,
           null,
           1,
+          null
+        ]
+      },
+      "/home/madihah/Coding/Makers/makersbnb/spec/features/view_spaces_spec.rb": {
+        "lines": [
+>>>>>>> origin/main
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+<<<<<<< HEAD
           1,
           null,
           null,
@@ -64,10 +84,27 @@
           1,
           1,
           null,
+=======
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+>>>>>>> origin/main
           null
         ]
       }
     },
+<<<<<<< HEAD
     "timestamp": 1637072165
+=======
+    "timestamp": 1637063920
+>>>>>>> origin/main
   }
 }
