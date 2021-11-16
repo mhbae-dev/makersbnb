@@ -1,0 +1,6 @@
+<h1> List of spaces </h1>
+<ul>
+  <% @spaces.each do |space| %>
+    <li><%= space[0] %>, <%= space[1] %>, £<%= space[2] %> </li>
+  <% end %>
+</ul>

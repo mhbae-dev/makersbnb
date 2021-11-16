@@ -11,6 +11,7 @@
           null,
           1,
           1,
+          1,
           null,
           1,
           1,
@@ -25,9 +26,39 @@
           1,
 =======
           1,
+          1,
           null,
           null,
           1,
+          null
+        ]
+      },
+      "/home/madihah/Coding/Makers/makersbnb/lib/space.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          0,
+          null,
+          null,
+          2,
+          null,
+          8,
+          null,
+          null,
           null
         ]
       },
@@ -74,6 +105,32 @@
         "lines": [
           1,
           1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/madihah/Coding/Makers/makersbnb/spec/space_spec.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
           1,
           1,
           null,
@@ -92,8 +149,23 @@
           1,
           null,
           1,
-          0,
-          0,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
 >>>>>>> origin/main
@@ -102,9 +174,13 @@
       }
     },
 <<<<<<< HEAD
+    "timestamp": 1637075971
+=======
+<<<<<<< HEAD
     "timestamp": 1637072165
 =======
     "timestamp": 1637063920
+>>>>>>> origin/main
 >>>>>>> origin/main
   }
 }

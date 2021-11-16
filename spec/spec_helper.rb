@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
 ENV['RACK_ENV'] = 'test'
+ENV['ENVIRONMENT'] = 'test'
 
 require 'simplecov'
 require 'simplecov-console'
+require_relative './setup_test_database.rb'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
@@ -53,4 +55,8 @@ RSpec.configure do |config|
 
   # The settings below are suggested to provide a good initial experience
   # with RSpec, but feel free to customize to your heart's content.
+  config.before(:each) do
+    setup_test_database
+  end
+
 end
