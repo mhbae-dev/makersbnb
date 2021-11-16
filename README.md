@@ -28,3 +28,6 @@ As a host
 I want to log in
 So that I can manage my spaces
 ```
+
+# Setup database 
+refer to db/migrations in repo 
