@@ -1,9 +1,16 @@
 require 'pg'       
   
 class Space
+
+  # attr_reader :name, :description, :price
+
+  # def initialize(name, description, price)
+  #   @name = name
+  #   @description = description
+  #   @price = price
+  # end
     
   def self.all     
-
     if ENV['ENVIRONMENT'] == 'test'    
       conn = PG.connect(dbname: 'makersbnb_test')    
     else    
@@ -12,8 +19,7 @@ class Space
     
     result = conn.exec("SELECT * FROM spaces;")    
     
-    result.map { |space| space['name'] }
-  
+    result.map { |space| [space['name'], space['description'],space['price']] }
   end
 
 end

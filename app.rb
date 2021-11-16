@@ -9,9 +9,8 @@ class MakersBnb < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  get '/' do
+  get '/spaces' do
     @spaces = Space.all
-    p @spaces
     erb(:index)
   end
 
