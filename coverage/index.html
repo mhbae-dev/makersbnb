@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-11-16T11:49:04+00:00">2021-11-16T11:49:04+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-11-16T21:18:16+09:00">2021-11-16T21:18:16+09:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,7 +23,7 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  94.74%
+  96.0%
 </span>
 
      </span>
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>3</b> files in total.
+    <b>4</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>19</b> relevant lines,
-    <span class="green"><b>18</b> lines covered</span> and
+    <b>25</b> relevant lines,
+    <span class="green"><b>24</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed. </span>
     (<span class="green">
-  94.74%
+  96.0%
 </span>
 )
   </div>
@@ -71,18 +71,29 @@
       <tbody>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#18a10ab5615a3bce28f4d47ba1193a07cce834fd" class="src_link" title="app.rb">app.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">90.00 %</td>
-            <td class="cell--number">20</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">9</td>
+            <td class="strong t-file__name"><a href="#a9724c6d1fcc1544430fc1a19b6000d7b34af9c5" class="src_link" title="app.rb">app.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">91.67 %</td>
+            <td class="cell--number">24</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">11</td>
             <td class="cell--number">1</td>
             <td class="cell--number">1.00</td>
             
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#83ffe2561c81b0d59bc65dd34f2ea1fca71ecd2d" class="src_link" title="spec/features/log_in_spec.rb">spec/features/log_in_spec.rb</a></td>
+            <td class="strong t-file__name"><a href="#8cd2ff8687d0777bcd3792fa05597aee077dab92" class="src_link" title="spec/features/list_new_space_spec.rb">spec/features/list_new_space_spec.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#8e79d264b17eb5be66f1de78164b71883d400eee" class="src_link" title="spec/features/log_in_spec.rb">spec/features/log_in_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">7</td>
             <td class="cell--number">5</td>
@@ -93,7 +104,7 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#e67eff612d74800c426151793f563afc99f7e5c7" class="src_link" title="spec/features/sign_up_spec.rb">spec/features/sign_up_spec.rb</a></td>
+            <td class="strong t-file__name"><a href="#aff5fb6291227e77cb3f9cf593beaff70582de51" class="src_link" title="spec/features/sign_up_spec.rb">spec/features/sign_up_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">6</td>
             <td class="cell--number">4</td>
@@ -120,12 +131,12 @@
 
       <div class="source_files">
       
-        <div class="source_table" id="18a10ab5615a3bce28f4d47ba1193a07cce834fd">
+        <div class="source_table" id="a9724c6d1fcc1544430fc1a19b6000d7b34af9c5">
   <div class="header">
     <h3>app.rb</h3>
     <h4>
-      <span class="yellow">
-  90.0%
+      <span class="green">
+  91.67%
 </span>
 
       lines covered
@@ -134,8 +145,8 @@
     
 
     <div class="t-line-summary">
-      <b>10</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>12</b> relevant lines.
+      <span class="green"><b>11</b> lines covered</span> and
       <span class="red"><b>1</b> lines missed.</span>
     </div>
 
@@ -351,12 +362,56 @@
 
             
 
+            <code class="ruby">  get &#39;/spaces/new&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    erb (:&#39;spaces/new&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="23">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">  run! if app_file == $PROGRAM_NAME</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="20">
+          <li class="never" data-hits="" data-linenumber="24">
             
             
 
@@ -371,7 +426,104 @@
 </div>
 
       
-        <div class="source_table" id="83ffe2561c81b0d59bc65dd34f2ea1fca71ecd2d">
+        <div class="source_table" id="8cd2ff8687d0777bcd3792fa05597aee077dab92">
+  <div class="header">
+    <h3>spec/features/list_new_space_spec.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>4</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">feature &#39;List a new space&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  scenario &#39;Displays some content&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    visit(&#39;/spaces/new&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content &#39;List a new space&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="8e79d264b17eb5be66f1de78164b71883d400eee">
   <div class="header">
     <h3>spec/features/log_in_spec.rb</h3>
     <h4>
@@ -479,7 +631,7 @@
 </div>
 
       
-        <div class="source_table" id="e67eff612d74800c426151793f563afc99f7e5c7">
+        <div class="source_table" id="aff5fb6291227e77cb3f9cf593beaff70582de51">
   <div class="header">
     <h3>spec/features/sign_up_spec.rb</h3>
     <h4>
