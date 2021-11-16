@@ -1,6 +1,7 @@
 require 'pg'       
   
 class Space
+  #comment
 
   # attr_reader :name, :description, :price
 
