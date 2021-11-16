@@ -1,7 +1,11 @@
 {
   "RSpec": {
     "coverage": {
+<<<<<<< HEAD
+      "/mnt/c/Users/mhbae/Desktop/Myoung-Dev/Makers/makersbnb/app.rb": {
+=======
       "/home/madihah/Coding/Makers/makersbnb/app.rb": {
+>>>>>>> origin/main
         "lines": [
           null,
           null,
@@ -15,6 +19,12 @@
           null,
           null,
           1,
+<<<<<<< HEAD
+          3,
+          null,
+          null,
+          1,
+=======
           1,
           1,
           null,
@@ -54,8 +64,45 @@
       },
       "/home/madihah/Coding/Makers/makersbnb/spec/features/view_spaces_spec.rb": {
         "lines": [
+>>>>>>> origin/main
           1,
           null,
+          1,
+          1,
+          1,
+          null,
+          1,
+<<<<<<< HEAD
+          1,
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/mnt/c/Users/mhbae/Desktop/Myoung-Dev/Makers/makersbnb/spec/features/list_new_space_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/Users/mhbae/Desktop/Myoung-Dev/Makers/makersbnb/spec/features/log_in_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/Users/mhbae/Desktop/Myoung-Dev/Makers/makersbnb/spec/features/sign_up_spec.rb": {
+        "lines": [
           1,
           1,
           null,
@@ -85,20 +132,27 @@
           null,
           1,
           1,
-          null,
           1,
           null,
           null,
           1,
           1,
           1,
-          null,
-          1,
-          null,
-          1,
           1,
           1,
           null,
+=======
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
           null,
           null,
           null,
@@ -113,10 +167,20 @@
           null,
           null,
           null,
+          null,
+>>>>>>> origin/main
           null
         ]
       }
     },
+<<<<<<< HEAD
     "timestamp": 1637075971
+=======
+<<<<<<< HEAD
+    "timestamp": 1637072165
+=======
+    "timestamp": 1637063920
+>>>>>>> origin/main
+>>>>>>> origin/main
   }
 }
