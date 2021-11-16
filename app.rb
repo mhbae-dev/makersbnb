@@ -9,11 +9,11 @@ class MakersBnb < Sinatra::Base
     register Sinatra::Reloader
   end
 
-<<<<<<< HEAD
   get '/spaces' do
     @spaces = Space.all
     erb(:index)
-=======
+  end
+  
   get '/' do
     erb(:sign_up)
   end
@@ -24,7 +24,6 @@ class MakersBnb < Sinatra::Base
 
   get '/spaces/new' do
     erb(:'spaces/new')
->>>>>>> origin/main
   end
 
   run! if app_file == $PROGRAM_NAME
