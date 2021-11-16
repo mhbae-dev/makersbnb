@@ -36,6 +36,16 @@ I want to log in
 So that I can manage my spaces
 ```
 
+```
+As a user
+I want to sign up
+So that I can log in and view spaces
+
+As a host
+I want to sign up
+So that I can log in and add a space
+```
+
 ## Setup database 
 
 Refer to instructions in db/migrations in repo 
