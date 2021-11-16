@@ -2,6 +2,7 @@
 
 require 'sinatra/base'
 require 'sinatra/reloader'
+require './lib/space.rb'
 
 class MakersBnb < Sinatra::Base
   configure :development do
@@ -9,7 +10,9 @@ class MakersBnb < Sinatra::Base
   end
 
   get '/' do
-    'Hello World'
+    @spaces = Space.all
+    p @spaces
+    erb(:index)
   end
 
   run! if app_file == $PROGRAM_NAME
