@@ -7,6 +7,7 @@ def setup_test_database
   conn = PG.connect(dbname: 'makersbnb_test')        
   
   # Clear the spaces table    
-  conn.exec("TRUNCATE spaces;")   
+  conn.exec("TRUNCATE spaces;")
+  conn.exec("TRUNCATE users;") 
 
 end
