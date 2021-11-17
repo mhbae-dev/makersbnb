@@ -24,10 +24,10 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/login' do
-    if User.check(params)
+    if User.check(params['email_address'], params['password'])
       redirect '/spaces'
     else
-      'Error user does not exist'
+      redirect '/login'
     end
   end
 

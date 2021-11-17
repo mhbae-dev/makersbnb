@@ -19,19 +19,21 @@ class User
     )
   end
 
-  def self.check(params)
+  def self.check(email_address, password)
     if ENV['ENVIRONMENT'] == 'test'
       conn = PG.connect(dbname: 'makersbnb_test')
     else
       conn = PG.connect(dbname: 'makersbnb')
     end
     result = conn.exec('SELECT * FROM users;')
-    result_array = result.map { |user| user }
+    result_array = result.map { |user| User.new(user['email_address'], user['password']) }
 
-    if result_array.each { |user| user == params }
-      return true
-    else
-      return false
+    result_array.each do |user|
+      if user.email_address == email_address && user.password == password
+        return true
+      else
+        return false
+      end
     end
   end
 end
