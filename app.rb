@@ -3,6 +3,7 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
 require './lib/space.rb'
+require './lib/user.rb'
 
 class MakersBnb < Sinatra::Base
   configure :development do
@@ -15,9 +16,12 @@ class MakersBnb < Sinatra::Base
   end
 
   get '/' do
-    email_address = params[:email_address]
-    password = params[:password]
     erb(:sign_up)
+  end
+
+  post '/' do
+    User.create(params['email_address'], params['password'])
+    redirect '/'
   end
 
   get '/login' do

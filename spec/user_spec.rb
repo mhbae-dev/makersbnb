@@ -3,18 +3,15 @@ require 'user'
 
 describe User do
   describe '.create' do
-    it 'adds a user to the users table in the makersbnb database' do
-      # let(:users_table){conn = PG.connect(dbname: 'makersbnb')
-      # conn.exec(
-      #   "();",
-      # )}
+    let(:users_table) do
       connection = PG.connect(dbname: 'makersbnb_test')
       result = connection.exec('SELECT * FROM users;')
-      user_array = result.map { |user| user['email_address'] }
+      result.map { |user| User.new(user['email_address'], user['password']) }
+    end
+    it 'adds a user to the users table in the makersbnb database' do
       User.create('test@testing.com', 'password123')
-
-      expect(user_array).to include 'test@testing.com'
-      expect(user_array).to include 'password123'
+      expect(users_table[0].email_address).to include 'test@testing.com'
+      expect(users_table[0].password).to include 'password123'
     end
   end
 end
