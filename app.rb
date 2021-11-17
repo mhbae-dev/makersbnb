@@ -23,12 +23,26 @@ class MakersBnb < Sinatra::Base
     erb(:login)
   end
 
+  post '/login' do
+    if User.check(params['email_address'], params['password'])
+      redirect '/spaces'
+    else
+      redirect '/login'
+    end
+  end
+
   get '/spaces' do
     @spaces = Space.all
     erb(:spaces)
   end
 
   post '/spaces' do
+    Space.add(
+      space_name: params[:name],
+      space_description: params[:description],
+      space_price: params[:price_per_night],
+    )
+    redirect '/spaces'
     Space.add(space_name: params[:name], 
     space_description: params[:description], 
     space_price: params[:price_per_night], 

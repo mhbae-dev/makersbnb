@@ -14,4 +14,35 @@ describe User do
       expect(users_table[0].password).to include 'password123'
     end
   end
+
+  describe '.check' do
+    context 'user exists in the database' do
+      before do
+        User.create('test@testing.com', 'password123')
+        User.create('test2@testing.com', 'password456')
+      end
+        let(:email_address) { 'test@testing.com' }
+        let(:password) { 'password123' }
+        it 'checks if the form data exists in the users table' do
+          @user = User.new(email_address, password)
+          user_check = User.check(email_address, password)
+          expect(user_check).to be true
+      end
+    end
+
+    context 'user does not exist in the database' do
+      before do
+        User.create('test@testing.com', 'password123')
+        User.create('test2@testing.com', 'password456')
+      end
+      
+      let(:email_address) { 'incorrectemail@testing.com' }
+      let(:password) { 'incorrectpassword' }
+      it 'checks if the form data exists in the users table' do
+        @user = User.new(email_address, password)
+        user_check = User.check(email_address, password)
+        expect(user_check).to be false
+      end
+    end
+  end
 end
