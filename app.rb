@@ -13,8 +13,10 @@ class MakersBnb < Sinatra::Base
     @spaces = Space.all
     erb(:index)
   end
-  
+
   get '/' do
+    email_address = params[:email_address]
+    password = params[:password]
     erb(:sign_up)
   end
 
