@@ -9,17 +9,17 @@ class MakersBnb < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  get '/spaces' do
-    @spaces = Space.all
-    erb(:index)
-  end
-  
   get '/' do
     erb(:sign_up)
   end
 
   get '/login' do
     erb(:login)
+  end
+
+  get '/spaces' do
+    @spaces = Space.all
+    erb(:spaces)
   end
 
   get '/spaces/new' do
