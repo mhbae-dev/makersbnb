@@ -39,6 +39,9 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/filter' do
+    @spaces = Space.filter(available_from: params[:available_from],
+      available_to: params[:available_to])
+
     redirect '/spaces'
   end
 
