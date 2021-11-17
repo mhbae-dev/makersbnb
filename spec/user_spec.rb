@@ -8,14 +8,13 @@ describe User do
       # conn.exec(
       #   "();",
       # )}
-      connection = PG.connect(dbname: 'makersbnb')
+      connection = PG.connect(dbname: 'makersbnb_test')
       result = connection.exec('SELECT * FROM users;')
-      result.map { |user| }
-      p result.map { |user| }
+      user_array = result.map { |user| user['email_address'] }
       User.create('test@testing.com', 'password123')
 
-      expect(result.map { |user| }).to include 'test@testing.com'
-      expect(result.map { |user| }).to include 'password123'
+      expect(user_array).to include 'test@testing.com'
+      expect(user_array).to include 'password123'
     end
   end
 end
