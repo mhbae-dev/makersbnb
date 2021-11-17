@@ -22,6 +22,13 @@ class MakersBnb < Sinatra::Base
     erb(:spaces)
   end
 
+  post '/spaces' do
+    Space.add(space_name: params[:name], 
+    space_description: params[:description], 
+    space_price: params[:price_per_night])
+    redirect "/spaces"
+  end
+
   get '/spaces/new' do
     erb(:'spaces/new')
   end
