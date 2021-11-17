@@ -43,6 +43,13 @@ class MakersBnb < Sinatra::Base
       space_price: params[:price_per_night],
     )
     redirect '/spaces'
+    Space.add(space_name: params[:name], 
+    space_description: params[:description], 
+    space_price: params[:price_per_night], 
+    available_from: params[:available_from], 
+    available_to: params[:available_to])
+    
+    redirect "/spaces"
   end
 
   get '/spaces/new' do

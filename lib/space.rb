@@ -20,15 +20,15 @@ class Space
     
     result = conn.exec("SELECT * FROM spaces;")    
     
-    result.map { |space| [space['name'], space['description'],space['price']] }
+    result.map { |space| [space['name'], space['description'],space['price'],space['available_from'],space['available_to']] }
   end
 
-  def self.add(space_name:, space_description:, space_price:)
+  def self.add(space_name:, space_description:, space_price:, available_from:, available_to:)
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'makersbnb_test')
     else
       connection = PG.connect(dbname: 'makersbnb')
     end
-    connection.exec("INSERT INTO spaces (name, description, price) VALUES('#{space_name}','#{space_description}','#{space_price}');")
+    connection.exec("INSERT INTO spaces (name, description, price, available_from, available_to) VALUES('#{space_name}','#{space_description}','#{space_price}','#{available_from}','#{available_to}');")
   end
 end

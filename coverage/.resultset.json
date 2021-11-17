@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/mnt/c/Users/mhbae/Desktop/Myoung-Dev/Makers/makersbnb/app.rb": {
+      "/Users/deanlewis/makers/makersbnb/app.rb": {
         "lines": [
           null,
           null,
@@ -58,7 +58,7 @@
           null
         ]
       },
-      "/mnt/c/Users/mhbae/Desktop/Myoung-Dev/Makers/makersbnb/lib/space.rb": {
+      "/Users/deanlewis/makers/makersbnb/lib/space.rb": {
         "lines": [
           1,
           null,
@@ -123,6 +123,15 @@
           1,
           1,
           null,
+          3,
+          null,
+          6,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
           0,
           null,
           1,
@@ -134,6 +143,10 @@
           1,
           null,
           0,
+          null,
+          1,
+          null,
+          null,
           null,
           null,
           null
@@ -148,6 +161,9 @@
           1,
           null,
           null,
+          null,
+          1,
+          1,
           1,
           1,
           1,
