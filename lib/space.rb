@@ -23,4 +23,12 @@ class Space
     result.map { |space| [space['name'], space['description'],space['price']] }
   end
 
+  def self.add(space_name:, space_description:, space_price:)
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'makersbnb_test')
+    else
+      connection = PG.connect(dbname: 'makersbnb')
+    end
+    connection.exec("INSERT INTO spaces (name, description, price) VALUES('#{space_name}','#{space_description}','#{space_price}');")
+  end
 end

@@ -12,9 +12,12 @@ feature 'view spaces' do
 
     visit '/spaces'
 
-    expect(page).to have_content 'hotel, two bed hotelroom, £600.00'
-    expect(page).to have_content 'penthouse, penthouse w/ hot tub, £1000.00'
-    expect(page).to have_content 'motel, single bed, £200.00'
+    expect(page).to have_content 'hotel' 
+    expect(page).to have_content 'bed hotelroom, £600.00'
+    expect(page).to have_content 'penthouse'
+    expect(page).to have_content 'w/ hot tub, £1000.00'
+    expect(page).to have_content 'motel' 
+    expect(page).to have_content 'single bed, £200.00'
 
   end
 end
