@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 feature 'Log in' do
   scenario 'Displays some content' do
     visit('/')
@@ -11,5 +13,4 @@ feature 'Log in' do
     expect(page).to have_field 'email_address'
     expect(page).to have_field 'password'
   end
-
 end
