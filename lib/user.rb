@@ -1,7 +1,6 @@
 require 'pg'
 
 class User
-
   attr_reader :email_address, :password
 
   def initialize(email_address, password)
@@ -20,4 +19,19 @@ class User
     )
   end
 
+  def self.check(params)
+    if ENV['ENVIRONMENT'] == 'test'
+      conn = PG.connect(dbname: 'makersbnb_test')
+    else
+      conn = PG.connect(dbname: 'makersbnb')
+    end
+    result = conn.exec('SELECT * FROM users;')
+    result_array = result.map { |user| user }
+
+    if result_array.each { |user| user == params }
+      return true
+    else
+      return false
+    end
+  end
 end
