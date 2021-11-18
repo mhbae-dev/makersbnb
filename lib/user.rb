@@ -24,24 +24,23 @@ class User
     User.new(result[0]['id'], result[0]['email_address'])
   end
 
-  # def self.check(email_address, password)
-  #   if ENV['ENVIRONMENT'] == 'test'
-  #     conn = PG.connect(dbname: 'makersbnb_test')
-  #   else
-  #     conn = PG.connect(dbname: 'makersbnb')
-  #   end
-  #   result = conn.exec('SELECT * FROM users;')
-  #   result_array =
-  #     result.map { |user| User.new(user['id'], user['email_address']) }
+  def self.check(email_address, password)
+    if ENV['ENVIRONMENT'] == 'test'
+      conn = PG.connect(dbname: 'makersbnb_test')
+    else
+      conn = PG.connect(dbname: 'makersbnb')
+    end
+    result = conn.exec("SELECT * FROM users WHERE email_address = '#{email_address}';")
+    User.new(result[0]['id'], result[0]['email_address'])
 
-  #   result_array.each do |user|
-  #     if user.email_address == email_address
-  #       return true
-  #     else
-  #       return false
-  #     end
-  #   end
-  # end
+    # result_array.each do |user|
+    #   if user.email_address == email_address
+    #     return true
+    #   else
+    #     return false
+    #   end
+    # end
+  end
 
   def self.find(id)
     return nil unless id

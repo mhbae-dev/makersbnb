@@ -4,6 +4,7 @@ require 'sinatra/base'
 require 'sinatra/reloader'
 require './lib/space'
 require './lib/user'
+require 'pg'
 
 class MakersBnb < Sinatra::Base
   enable :sessions
@@ -27,11 +28,14 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/login' do
-    if User.check(params['email_address'], params['password'])
-      redirect '/spaces'
-    else
-      redirect '/login'
-    end
+    user = User.check(params['email_address'], params['password'])
+    session[:user_id] = user.id
+    redirect '/spaces'
+    # if User.check(params['email_address'], params['password'])
+    #   redirect '/spaces'
+    # else
+    #   redirect '/login'
+    # end
   end
 
   get '/spaces' do

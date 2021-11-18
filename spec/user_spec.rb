@@ -32,20 +32,19 @@ describe User do
       end
     end
 
-    # describe '.check' do
-    #   context 'user exists in the database' do
-    #     before do
-    #       User.create('test@testing.com', 'password123')
-    #       User.create('test2@testing.com', 'password456')
-    #     end
-    #     let(:email_address) { 'test@testing.com' }
-    #     let(:password) { 'password123' }
-    #     it 'checks if the form data exists in the users table' do
-    #       @user = User.new(email_address, password)
-    #       user_check = User.check(email_address, password)
-    #       expect(user_check).to be true
-    #     end
-    #   end
+    describe '.check' do
+      it 'user exists in the database' do
+        user = User.create('test@testing.com', 'password123')
+        checked_user = User.check('test@testing.com', 'password123')
+
+        expect(checked_user.id).to eq user.id
+      end
+    end
+  end
+end
+      
+      
+      
 
     # context 'user does not exist in the database' do
     #   before do
@@ -61,5 +60,3 @@ describe User do
     #     expect(user_check).to be false
     #   end
     # end
-  end
-end

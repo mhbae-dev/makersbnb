@@ -14,11 +14,14 @@ feature 'Log in' do
     expect(page).to have_field 'password'
   end
 
-  scenario 'submits a form' do
-    visit('/login')
-    fill_in 'email_address', with: 'test@testing.com'
-    fill_in 'password', with: 'password123'
-    click_button 'Log in'
-    expect(page).to have_content 'Book a Space'
-  end
+  # scenario 'submits a form' do
+    it 'a user can log in' do
+      User.create('test@example.com', 'password123')
+      visit('/login')
+      fill_in 'email_address', with: 'test@example.com'
+      fill_in 'password', with: 'password123'
+      click_button 'Log in'
+      expect(page).to have_content 'Book a Space'
+    end
+  # end
 end
