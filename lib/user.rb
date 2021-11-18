@@ -30,16 +30,11 @@ class User
     else
       conn = PG.connect(dbname: 'makersbnb')
     end
-    result = conn.exec("SELECT * FROM users WHERE email_address = '#{email_address}';")
-    User.new(result[0]['id'], result[0]['email_address'])
+    result =
+      conn.exec("SELECT * FROM users WHERE email_address = '#{email_address}';")
 
-    # result_array.each do |user|
-    #   if user.email_address == email_address
-    #     return true
-    #   else
-    #     return false
-    #   end
-    # end
+    return unless result.any?
+    User.new(result[0]['id'], result[0]['email_address'])
   end
 
   def self.find(id)

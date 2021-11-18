@@ -2,15 +2,16 @@
 
 require 'sinatra/base'
 require 'sinatra/reloader'
+require 'sinatra/flash'
 require './lib/space'
 require './lib/user'
-require 'pg'
 
 class MakersBnb < Sinatra::Base
   enable :sessions
 
   configure :development do
     register Sinatra::Reloader
+    register Sinatra::Flash
   end
 
   get '/' do
@@ -29,13 +30,14 @@ class MakersBnb < Sinatra::Base
 
   post '/login' do
     user = User.check(params['email_address'], params['password'])
-    session[:user_id] = user.id
-    redirect '/spaces'
-    # if User.check(params['email_address'], params['password'])
-    #   redirect '/spaces'
-    # else
-    #   redirect '/login'
-    # end
+    if user
+      session[:user_id] = user.id
+      redirect '/spaces'
+    else
+      # Rackup works. rspec cant run flash. All feature tests failing.
+      flash[:notice] = 'Please check your email or password.'
+      redirect '/login'
+    end
   end
 
   get '/spaces' do

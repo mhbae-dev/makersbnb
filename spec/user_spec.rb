@@ -39,24 +39,12 @@ describe User do
 
         expect(checked_user.id).to eq user.id
       end
+
+      it 'returns nil given an incorrect email address' do
+        user = User.create('test@testing.com', 'password123')
+
+        expect(User.check('incorrect@example.com', 'password123')).to be_nil
+      end
     end
   end
 end
-      
-      
-      
-
-    # context 'user does not exist in the database' do
-    #   before do
-    #     User.create('test@testing.com', 'password123')
-    #     User.create('test2@testing.com', 'password456')
-    #   end
-
-    #   let(:email_address) { 'incorrectemail@testing.com' }
-    #   let(:password) { 'incorrectpassword' }
-    #   it 'checks if the form data exists in the users table' do
-    #     @user = User.new(email_address, password)
-    #     user_check = User.check(email_address, password)
-    #     expect(user_check).to be false
-    #   end
-    # end
