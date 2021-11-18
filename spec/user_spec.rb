@@ -8,12 +8,13 @@ describe User do
     let(:users_table) do
       connection = PG.connect(dbname: 'makersbnb_test')
       result = connection.exec('SELECT * FROM users;')
-      result.map { |user| User.new(user['email_address'], user['password']) }
+      result.map { |user| User.new(user['id'], user['email_address']) }
     end
     it 'adds a user to the users table in the makersbnb database' do
-      User.create('test@testing.com', 'password123')
-      expect(users_table[0].email_address).to include 'test@testing.com'
-      expect(users_table[0].password).to include 'password123'
+      user = User.create('test@testing.com', 'password123')
+      expect(user).to be_a User
+      expect(user.id).to eq users_table[0].id
+      expect(user.email_address).to eq users_table[0].email_address
     end
   end
 
@@ -23,12 +24,12 @@ describe User do
         User.create('test@testing.com', 'password123')
         User.create('test2@testing.com', 'password456')
       end
-        let(:email_address) { 'test@testing.com' }
-        let(:password) { 'password123' }
-        it 'checks if the form data exists in the users table' do
-          @user = User.new(email_address, password)
-          user_check = User.check(email_address, password)
-          expect(user_check).to be true
+      let(:email_address) { 'test@testing.com' }
+      let(:password) { 'password123' }
+      it 'checks if the form data exists in the users table' do
+        @user = User.new(email_address, password)
+        user_check = User.check(email_address, password)
+        expect(user_check).to be true
       end
     end
 
@@ -37,7 +38,7 @@ describe User do
         User.create('test@testing.com', 'password123')
         User.create('test2@testing.com', 'password456')
       end
-      
+
       let(:email_address) { 'incorrectemail@testing.com' }
       let(:password) { 'incorrectpassword' }
       it 'checks if the form data exists in the users table' do
