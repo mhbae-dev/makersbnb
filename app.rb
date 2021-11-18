@@ -6,6 +6,8 @@ require './lib/space'
 require './lib/user'
 
 class MakersBnb < Sinatra::Base
+  enable :sessions
+
   configure :development do
     register Sinatra::Reloader
   end
@@ -32,7 +34,12 @@ class MakersBnb < Sinatra::Base
   end
 
   get '/spaces' do
-    @spaces = Space.all
+    if session[:spaces]
+      @spaces = session[:spaces]
+    else
+      @spaces = Space.all
+    end
+
     erb(:spaces)
   end
 
@@ -47,8 +54,10 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/filter' do
-    @spaces = Space.filter(available_from: params[:available_from],
+    if params[:available_from] && params[:available_to] 
+      session[:spaces] = Space.filter(available_from: params[:available_from],
       available_to: params[:available_to])
+    end
 
     redirect '/spaces'
   end

@@ -4,7 +4,6 @@ require 'pg'
 require_relative './web_helper.rb'
 
 class Space
-  # comment
 
   # attr_reader :name, :description, :price
 
@@ -32,7 +31,7 @@ class Space
   def self.filter(available_from:, available_to:)
     conn = set_environment
 
-    results = conn.exec("SELECT * FROM spaces WHERE available_to BETWEEN '#{available_from}' AND '#{available_to}';")
+    results = conn.exec("SELECT * FROM spaces WHERE '#{available_from}' >= available_from INTERSECT SELECT * FROM spaces WHERE '#{available_to}' <= available_to;")
 
     results.map do |space|
       [space['name'], space['description'], space['price'], space['available_from'], space['available_to']]
