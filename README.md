@@ -30,6 +30,8 @@ I want to see the date that the space is available
 So that I know when it's available to book
 ```
 
+
+
 ### Other:
 
 ```
@@ -50,6 +52,20 @@ So that I can log in and view spaces
 As a host
 I want to sign up
 So that I can log in and add a space
+```
+
+```
+As a User
+I want to be able to filter spaces available within a range of dates
+So that I can see what spaces are available in the time I'd like to rent
+
+As a User
+I want to remove my date filter 
+So that I can see all the spaces again
+
+As a User
+I want to be shown what my filter were 
+So that I can remember my dates and change them if I want to
 ```
 
 ## Setup database 
