@@ -39,7 +39,7 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>9</b> files in total.
+    <b>10</b> files in total.
   </div>
 
   <div class="t-line-summary">
@@ -128,7 +128,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#aff5fb6291227e77cb3f9cf593beaff70582de51" class="src_link" title="spec/features/sign_up_spec.rb">spec/features/sign_up_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">13</td>
+            <td class="cell--number">15</td>
             <td class="cell--number">9</td>
             <td class="cell--number">9</td>
             <td class="cell--number">0</td>
@@ -186,7 +186,7 @@
 
       <div class="source_files">
       
-        <div class="source_table" id="6741f308a6332dfd71202a3c79c3c0d4e5354635">
+        <div class="source_table" id="67440955f6e6da08560dc6cfa7c05866558a04ca">
   <div class="header">
     <h3>app.rb</h3>
     <h4>
@@ -263,7 +263,7 @@
 
             
 
-            <code class="ruby">require &#39;./lib/space.rb&#39;</code>
+            <code class="ruby">require &#39;./lib/space&#39;</code>
           </li>
         </div>
       
@@ -274,7 +274,7 @@
 
             
 
-            <code class="ruby">require &#39;./lib/user.rb&#39;</code>
+            <code class="ruby">require &#39;./lib/user&#39;</code>
           </li>
         </div>
       
@@ -791,6 +791,61 @@
 
             
 
+            <code class="ruby">  post &#39;/filter&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="42">
+            
+            
+
+            
+
+            <code class="ruby">    redirect &#39;/spaces&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="43">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="44">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="45">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="46">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">  get &#39;/spaces/new&#39; do</code>
           </li>
         </div>
@@ -859,8 +914,8 @@
   <div class="header">
     <h3>lib/space.rb</h3>
     <h4>
-      <span class="yellow">
-  84.62%
+      <span class="green">
+  100.0%
 </span>
 
       lines covered
@@ -869,9 +924,9 @@
     
 
     <div class="t-line-summary">
-      <b>13</b> relevant lines.
+      <b>11</b> relevant lines.
       <span class="green"><b>11</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -882,13 +937,13 @@
     <ol>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="1">
+            
             
 
             
 
-            <code class="ruby">require &#39;pg&#39;       </code>
+            <code class="ruby"># frozen_string_literal: true</code>
           </li>
         </div>
       
@@ -899,7 +954,7 @@
 
             
 
-            <code class="ruby">  </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -910,18 +965,18 @@
 
             
 
-            <code class="ruby">class Space</code>
+            <code class="ruby">require &#39;pg&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="4">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  #comment</code>
+            
+
+            <code class="ruby">require_relative &#39;./web_helper.rb&#39;</code>
           </li>
         </div>
       
@@ -937,13 +992,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  # attr_reader :name, :description, :price</code>
+            
+
+            <code class="ruby">class Space</code>
           </li>
         </div>
       
@@ -954,7 +1009,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # comment</code>
           </li>
         </div>
       
@@ -965,7 +1020,7 @@
 
             
 
-            <code class="ruby">  # def initialize(name, description, price)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -976,7 +1031,7 @@
 
             
 
-            <code class="ruby">  #   @name = name</code>
+            <code class="ruby">  # attr_reader :name, :description, :price</code>
           </li>
         </div>
       
@@ -987,7 +1042,7 @@
 
             
 
-            <code class="ruby">  #   @description = description</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -998,7 +1053,7 @@
 
             
 
-            <code class="ruby">  #   @price = price</code>
+            <code class="ruby">  # def initialize(name, description, price)</code>
           </li>
         </div>
       
@@ -1009,7 +1064,7 @@
 
             
 
-            <code class="ruby">  # end</code>
+            <code class="ruby">  #   @name = name</code>
           </li>
         </div>
       
@@ -1020,18 +1075,18 @@
 
             
 
-            <code class="ruby">    </code>
+            <code class="ruby">  #   @description = description</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="14">
+            
             
 
             
 
-            <code class="ruby">  def self.all     </code>
+            <code class="ruby">  #   @price = price</code>
           </li>
         </div>
       
@@ -3205,51 +3260,51 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="29">
+          <li class="never" data-hits="" data-linenumber="26">
             
             
 
             
 
-            <code class="ruby">    else</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="30">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="27">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">      connection = PG.connect(dbname: &#39;makersbnb&#39;)</code>
+            
+
+            <code class="ruby">  def self.add(space_name:, space_description:, space_price:, available_from:, available_to:)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
+          <li class="covered" data-hits="5" data-linenumber="28">
+            <span class="hits">5</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">    conn = set_environment</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="32">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="5" data-linenumber="29">
+            <span class="hits">5</span>
             
 
             
 
-            <code class="ruby">    connection.exec(&quot;INSERT INTO spaces (name, description, price, available_from, available_to) VALUES(&#39;#{space_name}&#39;,&#39;#{space_description}&#39;,&#39;#{space_price}&#39;,&#39;#{available_from}&#39;,&#39;#{available_to}&#39;);&quot;)</code>
+            <code class="ruby">    conn.exec(&quot;INSERT INTO spaces (name, description, price, available_from, available_to) VALUES(&#39;#{space_name}&#39;,&#39;#{space_description}&#39;,&#39;#{space_price}&#39;,&#39;#{available_from}&#39;,&#39;#{available_to}&#39;);&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="33">
+          <li class="never" data-hits="" data-linenumber="30">
             
             
 
@@ -3260,7 +3315,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="34">
+          <li class="never" data-hits="" data-linenumber="31">
             
             
 
@@ -3275,7 +3330,7 @@
 </div>
 
       
-        <div class="source_table" id="d51e704414f6cfaa1be7ad3950e3a997d8eb2b39">
+        <div class="source_table" id="f60042b25057593b629ef0eadd0752ca8a36e428">
   <div class="header">
     <h3>lib/user.rb</h3>
     <h4>
@@ -3302,13 +3357,13 @@
     <ol>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="1">
+            
             
 
             
 
-            <code class="ruby">require &#39;pg&#39;</code>
+            <code class="ruby"># frozen_string_literal: true</code>
           </li>
         </div>
       
@@ -3330,7 +3385,7 @@
 
             
 
-            <code class="ruby">class User</code>
+            <code class="ruby">require &#39;pg&#39;</code>
           </li>
         </div>
       
@@ -3352,29 +3407,29 @@
 
             
 
+            <code class="ruby">class User</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">  attr_reader :email_address, :password</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
+          <li class="never" data-hits="" data-linenumber="7">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def initialize(email_address, password)</code>
           </li>
         </div>
       
@@ -3385,7 +3440,7 @@
 
             
 
-            <code class="ruby">    @email_address = email_address</code>
+            <code class="ruby">  def initialize(email_address, password)</code>
           </li>
         </div>
       
@@ -3396,18 +3451,18 @@
 
             
 
-            <code class="ruby">    @password = password</code>
+            <code class="ruby">    @email_address = email_address</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    @password = password</code>
           </li>
         </div>
       
@@ -3418,18 +3473,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="12">
+            
             
 
             
 
-            <code class="ruby">  def self.create(email_address, password)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3440,7 +3495,7 @@
 
             
 
-            <code class="ruby">    if ENV[&#39;ENVIRONMENT&#39;] == &#39;test&#39;</code>
+            <code class="ruby">  def self.create(email_address, password)</code>
           </li>
         </div>
       
@@ -3451,45 +3506,56 @@
 
             
 
-            <code class="ruby">      conn = PG.connect(dbname: &#39;makersbnb_test&#39;)</code>
+            <code class="ruby">    conn = if ENV[&#39;ENVIRONMENT&#39;] == &#39;test&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    else</code>
+            
+
+            <code class="ruby">             PG.connect(dbname: &#39;makersbnb_test&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="16">
             
             
 
             
 
-            <code class="ruby">      conn = PG.connect(dbname: &#39;makersbnb&#39;)</code>
+            <code class="ruby">           else</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="missed" data-hits="0" data-linenumber="17">
             
             
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">             PG.connect(dbname: &#39;makersbnb&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="18">
+          <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby">           end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="19">
             <span class="hits">1</span>
             
 
@@ -3500,24 +3566,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="19">
-            
-            
-
-            
-
-            <code class="ruby">      &quot;INSERT INTO users (email_address, password) VALUES(&#39;#{email_address}&#39;, &#39;#{password}&#39;);&quot;,</code>
-          </li>
-        </div>
-      
-        <div>
           <li class="never" data-hits="" data-linenumber="20">
             
             
 
             
 
-            <code class="ruby">    )</code>
+            <code class="ruby">      &quot;INSERT INTO users (email_address, password) VALUES(&#39;#{email_address}&#39;, &#39;#{password}&#39;);&quot;</code>
           </li>
         </div>
       
@@ -3528,7 +3583,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    )</code>
           </li>
         </div>
       
@@ -3539,7 +3594,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -3559,7 +3614,137 @@
 </div>
 
       
-        <div class="source_table" id="7dbcd581f618df5af7d25541ccf9df4ffd32fdb5">
+        <div class="source_table" id="a787d5971465530e0de1af2bb2e4d7b47999a832">
+  <div class="header">
+    <h3>lib/web_helper.rb</h3>
+    <h4>
+      <span class="red">
+  75.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>4</b> relevant lines.
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="1">
+            
+            
+
+            
+
+            <code class="ruby"># frozen_string_literal: true</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">def set_environment</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="10" data-linenumber="4">
+            <span class="hits">10</span>
+            
+
+            
+
+            <code class="ruby">  if ENV[&#39;ENVIRONMENT&#39;] == &#39;test&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="10" data-linenumber="5">
+            <span class="hits">10</span>
+            
+
+            
+
+            <code class="ruby">    PG.connect(dbname: &#39;makersbnb_test&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby">  else</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby">    PG.connect(dbname: &#39;makersbnb&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="a61b21bbb9f483642928687a3a79d5c326b35c16">
   <div class="header">
     <h3>spec/features/log_in_spec.rb</h3>
     <h4>
@@ -3586,24 +3771,24 @@
     <ol>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="1">
+            
             
 
             
 
-            <code class="ruby">feature &#39;Log in&#39; do</code>
+            <code class="ruby"># frozen_string_literal: true</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="2">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="2">
+            
             
 
             
 
-            <code class="ruby">  scenario &#39;Displays some content&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3614,7 +3799,7 @@
 
             
 
-            <code class="ruby">    visit(&#39;/&#39;)</code>
+            <code class="ruby">feature &#39;Log in&#39; do</code>
           </li>
         </div>
       
@@ -3625,7 +3810,7 @@
 
             
 
-            <code class="ruby">    click_link &#39;Login&#39;</code>
+            <code class="ruby">  scenario &#39;Displays some content&#39; do</code>
           </li>
         </div>
       
@@ -3636,12 +3821,34 @@
 
             
 
+            <code class="ruby">    visit(&#39;/&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    click_link &#39;Login&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    expect(page).to have_content &#39;Log in to MakersBnB&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
+          <li class="never" data-hits="" data-linenumber="8">
             
             
 
@@ -3652,35 +3859,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
+          <li class="never" data-hits="" data-linenumber="9">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  scenario &#39;Displays a form&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    visit(&#39;/login&#39;)</code>
           </li>
         </div>
       
@@ -3691,7 +3876,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_button &#39;Log in&#39;</code>
+            <code class="ruby">  scenario &#39;Displays a form&#39; do</code>
           </li>
         </div>
       
@@ -3702,7 +3887,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_field &#39;email_address&#39;</code>
+            <code class="ruby">    visit(&#39;/login&#39;)</code>
           </li>
         </div>
       
@@ -3713,12 +3898,34 @@
 
             
 
+            <code class="ruby">    expect(page).to have_button &#39;Log in&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_field &#39;email_address&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    expect(page).to have_field &#39;password&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="13">
+          <li class="never" data-hits="" data-linenumber="15">
             
             
 
@@ -3729,18 +3936,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="never" data-hits="" data-linenumber="16">
             
             
 
@@ -3755,7 +3951,7 @@
 </div>
 
       
-        <div class="source_table" id="c2c841c2b37b57165c23e3dede30ddb4164f60ed">
+        <div class="source_table" id="7f56620733687ea2a0151a6e534e9d70f2dafb44">
   <div class="header">
     <h3>spec/features/new_space_form_spec.rb</h3>
     <h4>
@@ -3782,24 +3978,24 @@
     <ol>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="1">
+            
             
 
             
 
-            <code class="ruby">feature &#39;New space form&#39; do</code>
+            <code class="ruby"># frozen_string_literal: true</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="2">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="2">
+            
             
 
             
 
-            <code class="ruby">  scenario &#39;Displays some content&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3810,7 +4006,7 @@
 
             
 
-            <code class="ruby">    visit(&#39;/spaces/new&#39;)</code>
+            <code class="ruby">feature &#39;New space form&#39; do</code>
           </li>
         </div>
       
@@ -3821,12 +4017,34 @@
 
             
 
+            <code class="ruby">  scenario &#39;Displays some content&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    visit(&#39;/spaces/new&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    expect(page).to have_content &#39;List a new space&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="5">
+          <li class="never" data-hits="" data-linenumber="7">
             
             
 
@@ -3837,35 +4055,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
+          <li class="never" data-hits="" data-linenumber="8">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  scenario &#39;Displays a form&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    visit(&#39;/spaces/new&#39;)</code>
           </li>
         </div>
       
@@ -3876,7 +4072,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_button &#39;List my space&#39;</code>
+            <code class="ruby">  scenario &#39;Displays a form&#39; do</code>
           </li>
         </div>
       
@@ -3887,7 +4083,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_field &#39;name&#39;</code>
+            <code class="ruby">    visit(&#39;/spaces/new&#39;)</code>
           </li>
         </div>
       
@@ -3898,7 +4094,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_field &#39;description&#39;</code>
+            <code class="ruby">    expect(page).to have_button &#39;List my space&#39;</code>
           </li>
         </div>
       
@@ -3909,7 +4105,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_field &#39;price_per_night&#39;</code>
+            <code class="ruby">    expect(page).to have_field &#39;name&#39;</code>
           </li>
         </div>
       
@@ -3920,7 +4116,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_field &#39;available_from&#39;</code>
+            <code class="ruby">    expect(page).to have_field &#39;description&#39;</code>
           </li>
         </div>
       
@@ -3931,12 +4127,34 @@
 
             
 
+            <code class="ruby">    expect(page).to have_field &#39;price_per_night&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_field &#39;available_from&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    expect(page).to have_field &#39;available_to&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
@@ -3947,7 +4165,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 
@@ -3958,7 +4176,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
+          <li class="covered" data-hits="1" data-linenumber="19">
             <span class="hits">1</span>
             
 
@@ -3969,7 +4187,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="18">
+          <li class="covered" data-hits="1" data-linenumber="20">
             <span class="hits">1</span>
             
 
@@ -3980,35 +4198,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="19">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    fill_in&quot;name&quot;, with: &quot;Tent&quot;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="20">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    fill_in&quot;description&quot;, with: &quot;8 person tent in field&quot;</code>
-          </li>
-        </div>
-      
-        <div>
           <li class="covered" data-hits="1" data-linenumber="21">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    fill_in&quot;price_per_night&quot;, with: &quot;20.00&quot;</code>
+            <code class="ruby">    fill_in &#39;name&#39;, with: &#39;Tent&#39;</code>
           </li>
         </div>
       
@@ -4019,7 +4215,7 @@
 
             
 
-            <code class="ruby">    fill_in&quot;available_from&quot;, with: &quot;2021-10-28&quot;</code>
+            <code class="ruby">    fill_in &#39;description&#39;, with: &#39;8 person tent in field&#39;</code>
           </li>
         </div>
       
@@ -4030,7 +4226,7 @@
 
             
 
-            <code class="ruby">    fill_in&quot;available_to&quot;, with: &quot;2021-10-05&quot;</code>
+            <code class="ruby">    fill_in &#39;price_per_night&#39;, with: &#39;20.00&#39;</code>
           </li>
         </div>
       
@@ -4041,7 +4237,7 @@
 
             
 
-            <code class="ruby">    click_button &quot;List my space&quot;</code>
+            <code class="ruby">    fill_in &#39;available_from&#39;, with: &#39;2021-10-28&#39;</code>
           </li>
         </div>
       
@@ -4052,7 +4248,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content &quot;Tent&quot;</code>
+            <code class="ruby">    fill_in &#39;available_to&#39;, with: &#39;2021-10-05&#39;</code>
           </li>
         </div>
       
@@ -4063,7 +4259,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content &quot;8 person tent in field, £20.00&quot;</code>
+            <code class="ruby">    click_button &#39;List my space&#39;</code>
           </li>
         </div>
       
@@ -4074,12 +4270,34 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content &quot;Available from: 2021-10-28, Available to: 2021-10-05&quot;</code>
+            <code class="ruby">    expect(page).to have_content &#39;Tent&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="28">
+          <li class="covered" data-hits="1" data-linenumber="28">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content &#39;8 person tent in field, £20.00&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="29">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content &#39;Available from: 2021-10-28, Available to: 2021-10-05&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
             
             
 
@@ -4090,18 +4308,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="29">
-            
-            
-
-            
-
-            <code class="ruby">  </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="30">
+          <li class="never" data-hits="" data-linenumber="31">
             
             
 
@@ -4116,7 +4323,7 @@
 </div>
 
       
-        <div class="source_table" id="3d910f48a08dbbc051ca5a29a12d60a931b114dd">
+        <div class="source_table" id="3a3ae32b61b7a69c81187c14ff95e180add2e36c">
   <div class="header">
     <h3>spec/features/sign_up_spec.rb</h3>
     <h4>
@@ -4143,187 +4350,13 @@
     <ol>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">feature &#39;Sign up&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="2">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  scenario &#39;Displays some content&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    visit(&#39;/&#39;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(page).to have_content &#39;Sign up&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="5">
+          <li class="never" data-hits="" data-linenumber="1">
             
             
 
             
 
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  scenario &#39;Displays a form&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    visit(&#39;/&#39;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(page).to have_button &#39;Sign up&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="10">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(page).to have_field &#39;email_address&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(page).to have_field &#39;password&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="13">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="e49647df1db712770675d0a31b1f83d2976bf6fc">
-  <div class="header">
-    <h3>spec/features/view_spaces_spec.rb</h3>
-    <h4>
-      <span class="green">
-  100.0%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>9</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">require &#39;pg&#39;</code>
+            <code class="ruby"># frozen_string_literal: true</code>
           </li>
         </div>
       
@@ -4345,7 +4378,203 @@
 
             
 
-            <code class="ruby">require_relative &#39;../../lib/space.rb&#39;</code>
+            <code class="ruby">feature &#39;Sign up&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  scenario &#39;Displays some content&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    visit(&#39;/&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content &#39;Sign up&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  scenario &#39;Displays a form&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    visit(&#39;/&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_button &#39;Sign up&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_field &#39;email_address&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_field &#39;password&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="55597412b5e9e6c16442a0d9202d7d15185acfbf">
+  <div class="header">
+    <h3>spec/features/view_spaces_spec.rb</h3>
+    <h4>
+      <span class="yellow">
+  88.89%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>18</b> relevant lines.
+      <span class="green"><b>16</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="1">
+            
+            
+
+            
+
+            <code class="ruby"># frozen_string_literal: true</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">require &#39;pg&#39;</code>
           </li>
         </div>
       
@@ -4367,12 +4596,34 @@
 
             
 
+            <code class="ruby">require_relative &#39;../../lib/space&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">feature &#39;view spaces&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
+          <li class="covered" data-hits="1" data-linenumber="8">
             <span class="hits">1</span>
             
 
@@ -4383,18 +4634,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="9">
             
             
 
@@ -4405,35 +4645,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
+          <li class="covered" data-hits="1" data-linenumber="10">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    Space.add(space_name: &#39;hotel&#39;, space_description: &#39;two bed hotelroom&#39;, space_price: &#39;600.00&#39;, available_from: &#39;2021-10-10&#39;, available_to: &#39;2021-05-05&#39;)</code>
+            <code class="ruby">    Space.add(space_name: &#39;hotel&#39;, space_description: &#39;two bed hotelroom&#39;, space_price: &#39;600.00&#39;,</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
+          <li class="never" data-hits="" data-linenumber="11">
             
             
 
             
 
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    visit &#39;/spaces&#39;</code>
+            <code class="ruby">              available_from: &#39;2021-10-10&#39;, available_to: &#39;2021-05-05&#39;)</code>
           </li>
         </div>
       
@@ -4455,18 +4684,18 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content &#39;hotel&#39; </code>
+            <code class="ruby">    visit &#39;/spaces&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="14">
+            
             
 
             
 
-            <code class="ruby">    expect(page).to have_content &#39;bed hotelroom, £600.00&#39;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4477,12 +4706,34 @@
 
             
 
-            <code class="ruby">    expect(page).to have_content &quot;Available from: 2021-10-10, Available to: 2021-05-05&quot;</code>
+            <code class="ruby">    expect(page).to have_content &#39;hotel&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content &#39;bed hotelroom, £600.00&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="17">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content &#39;Available from: 2021-10-10, Available to: 2021-05-05&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 
@@ -4493,7 +4744,172 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby">  </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  scenario &#39;filter by date boxes&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="21">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    Space.add(space_name: &#39;motel&#39;, space_description: &#39;two bed motelroom&#39;, space_price: &#39;600.00&#39;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby">    available_from: &#39;2021-11-10&#39;, available_to: &#39;2022-06-05&#39;) </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="23">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    Space.add(space_name: &#39;mini van&#39;, space_description: &#39;two bed minivan&#39;, space_price: &#39;700.00&#39;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="24">
+            
+            
+
+            
+
+            <code class="ruby">    available_from: &#39;2021-12-10&#39;, available_to: &#39;2022-07-05&#39;)          </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    visit &#39;/spaces&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="26">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    fill_in &#39;available_from&#39;, with: &quot;2021-11-10&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="27">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    fill_in &#39;available_to&#39;, with: &quot;2022-01-01&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="28">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content &#39;hotel&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="29">
+            
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content &#39;bed hotelroom, £600.00&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="30">
+            
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content &#39;Available from: 2021-10-10, Available to: 2021-05-05&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="31">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="33">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="34">
             
             
 
@@ -4508,7 +4924,7 @@
 </div>
 
       
-        <div class="source_table" id="74929ea17f713427d3036d95b60e7fdb86dda9c2">
+        <div class="source_table" id="e6a5617e237da9763d688c40d79c26823fc27caa">
   <div class="header">
     <h3>spec/space_spec.rb</h3>
     <h4>
@@ -4522,8 +4938,8 @@
     
 
     <div class="t-line-summary">
-      <b>9</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>14</b> relevant lines.
+      <span class="green"><b>14</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -4535,7 +4951,29 @@
     <ol>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
+          <li class="never" data-hits="" data-linenumber="1">
+            
+            
+
+            
+
+            <code class="ruby"># frozen_string_literal: true</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
             <span class="hits">1</span>
             
 
@@ -4546,35 +4984,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="2">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">require_relative &#39;./../lib/space.rb&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="3">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
           <li class="covered" data-hits="1" data-linenumber="4">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">describe Space do</code>
+            <code class="ruby">require_relative &#39;./../lib/space&#39;</code>
           </li>
         </div>
       
@@ -4585,7 +5001,7 @@
 
             
 
-            <code class="ruby">  </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4596,7 +5012,7 @@
 
             
 
-            <code class="ruby">  describe &#39;.all&#39; do</code>
+            <code class="ruby">describe Space do</code>
           </li>
         </div>
       
@@ -4607,18 +5023,18 @@
 
             
 
-            <code class="ruby">    it &#39;returns a list of spaces&#39; do</code>
+            <code class="ruby">  describe &#39;.all&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="8">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    it &#39;returns a list of spaces&#39; do</code>
           </li>
         </div>
       
@@ -4629,7 +5045,7 @@
 
             
 
-            <code class="ruby">    conn = PG.connect(dbname: &#39;makersbnb_test&#39;)</code>
+            <code class="ruby">      conn = PG.connect(dbname: &#39;makersbnb_test&#39;)</code>
           </li>
         </div>
       
@@ -4644,7 +5060,7 @@
       <span class="red"><b>2</b> lines missed.</span>
     </div>
 
-            <code class="ruby">  </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4655,7 +5071,7 @@
 
             
 
-            <code class="ruby">    # Add the test data</code>
+            <code class="ruby">      # Add the test data</code>
           </li>
         </div>
       
@@ -4972,7 +5388,7 @@
 </div>
 
       
-        <div class="source_table" id="61b1001461d35a00a64c66ad380c74bda32c441d">
+        <div class="source_table" id="8268965049147d014392dbc5562eff727030283c">
   <div class="header">
     <h3>spec/user_spec.rb</h3>
     <h4>
@@ -5009,7 +5425,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="2">
+          <li class="covered" data-hits="1" data-linenumber="4">
             <span class="hits">1</span>
             
 

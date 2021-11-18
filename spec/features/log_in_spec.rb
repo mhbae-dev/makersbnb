@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 feature 'Log in' do
   scenario 'Displays some content' do
     visit('/')

@@ -2,8 +2,8 @@
 
 require 'sinatra/base'
 require 'sinatra/reloader'
-require './lib/space.rb'
-require './lib/user.rb'
+require './lib/space'
+require './lib/user'
 
 class MakersBnb < Sinatra::Base
   configure :development do
@@ -37,20 +37,22 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/spaces' do
-    Space.add(
-      space_name: params[:name],
-      space_description: params[:description],
-      space_price: params[:price_per_night],
-    )
-    redirect '/spaces'
-    Space.add(space_name: params[:name], 
-    space_description: params[:description], 
-    space_price: params[:price_per_night], 
-    available_from: params[:available_from], 
+    Space.add(space_name: params[:name],
+    space_description: params[:description],
+    space_price: params[:price_per_night],
+    available_from: params[:available_from],
     available_to: params[:available_to])
-    
-    redirect "/spaces"
+
+    redirect '/spaces'
   end
+
+  post '/filter' do
+    @spaces = Space.filter(available_from: params[:available_from],
+      available_to: params[:available_to])
+
+    redirect '/spaces'
+  end
+
 
   get '/spaces/new' do
     erb(:'spaces/new')

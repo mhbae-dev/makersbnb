@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/deanlewis/makers/makersbnb/app.rb": {
+      "/home/madihah/Coding/Makers/makersbnb/app.rb": {
         "lines": [
           null,
           null,
@@ -48,6 +48,11 @@
           null,
           null,
           1,
+          null,
+          null,
+          1,
+          0,
+          null,
           null,
           null,
           1,
@@ -58,8 +63,11 @@
           null
         ]
       },
-      "/Users/deanlewis/makers/makersbnb/lib/space.rb": {
+      "/home/madihah/Coding/Makers/makersbnb/lib/space.rb": {
         "lines": [
+          null,
+          null,
+          1,
           1,
           null,
           1,
@@ -77,8 +85,10 @@
           4,
           4,
           null,
-          0,
+          5,
           null,
+          5,
+          6,
           null,
           4,
           null,
@@ -98,7 +108,7 @@
       },
       "/mnt/c/Users/mhbae/Desktop/Myoung-Dev/Makers/makersbnb/lib/user.rb": {
         "lines": [
-          1,
+          null,
           null,
           1,
           1,
@@ -148,12 +158,13 @@
           null,
           null,
           null,
-          null,
           null
         ]
       },
       "/mnt/c/Users/mhbae/Desktop/Myoung-Dev/Makers/makersbnb/spec/features/log_in_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -183,6 +194,8 @@
       },
       "/mnt/c/Users/mhbae/Desktop/Myoung-Dev/Makers/makersbnb/spec/features/new_space_form_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -205,13 +218,14 @@
           1,
           1,
           1,
-          null,
           null,
           null
         ]
       },
       "/mnt/c/Users/mhbae/Desktop/Myoung-Dev/Makers/makersbnb/spec/features/sign_up_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -229,6 +243,13 @@
       },
       "/mnt/c/Users/mhbae/Desktop/Myoung-Dev/Makers/makersbnb/spec/features/view_spaces_spec.rb": {
         "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
           1,
           null,
           1,
@@ -256,27 +277,36 @@
       },
       "/mnt/c/Users/mhbae/Desktop/Myoung-Dev/Makers/makersbnb/spec/space_spec.rb": {
         "lines": [
-          1,
-          1,
           null,
-          1,
           null,
           1,
           1,
           null,
           1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
           null,
           null,
           1,
           1,
           1,
           null,
+          null,
           1,
           null,
           1,
-          1,
-          1,
-          null,
           null,
           null,
           null,
@@ -296,6 +326,8 @@
       },
       "/mnt/c/Users/mhbae/Desktop/Myoung-Dev/Makers/makersbnb/spec/user_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null,

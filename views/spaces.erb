@@ -6,6 +6,19 @@
   <a href="/spaces/new">List a Space</a>
 </div>
 <div>
+<form action="/filter" method="post">
+<label for='available_from'>Available from:
+<input type="date" name="available_from" required>
+</label>
+<br>
+<label for='available_to'>Available to:
+<input type="date" name="available_to" required>
+</label>
+<br>
+<input style="margin-top: 1rem;" type="submit" value="List Space">
+</form>
+</div>
+<div>
   <ul style="list-style: none;">
     <% @spaces.each do |space| %>
       <li>

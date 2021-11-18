@@ -24,6 +24,12 @@ I want to add additional information about my space
 So that users can understand more about my space
 ```
 
+```
+As a user
+I want to see the date that the space is available
+So that I know when it's available to book
+```
+
 ### Other:
 
 ```

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'pg'
 
 class User
@@ -9,13 +11,13 @@ class User
   end
 
   def self.create(email_address, password)
-    if ENV['ENVIRONMENT'] == 'test'
-      conn = PG.connect(dbname: 'makersbnb_test')
-    else
-      conn = PG.connect(dbname: 'makersbnb')
-    end
+    conn = if ENV['ENVIRONMENT'] == 'test'
+             PG.connect(dbname: 'makersbnb_test')
+           else
+             PG.connect(dbname: 'makersbnb')
+           end
     conn.exec(
-      "INSERT INTO users (email_address, password) VALUES('#{email_address}', '#{password}');",
+      "INSERT INTO users (email_address, password) VALUES('#{email_address}', '#{password}');"
     )
   end
 

@@ -1,7 +1,10 @@
-require 'pg'       
-  
+# frozen_string_literal: true
+
+require 'pg'
+require_relative './web_helper.rb'
+
 class Space
-  #comment
+  # comment
 
   # attr_reader :name, :description, :price
 
@@ -10,25 +13,30 @@ class Space
   #   @description = description
   #   @price = price
   # end
-    
-  def self.all     
-    if ENV['ENVIRONMENT'] == 'test'    
-      conn = PG.connect(dbname: 'makersbnb_test')    
-    else    
-      conn = PG.connect(dbname: 'makersbnb')    
-    end    
-    
-    result = conn.exec("SELECT * FROM spaces;")    
-    
-    result.map { |space| [space['name'], space['description'],space['price'],space['available_from'],space['available_to']] }
+
+  def self.all
+    conn = set_environment
+
+    result = conn.exec('SELECT * FROM spaces;')
+
+    result.map do |space|
+      [space['name'], space['description'], space['price'], space['available_from'], space['available_to']]
+    end
   end
 
   def self.add(space_name:, space_description:, space_price:, available_from:, available_to:)
-    if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'makersbnb_test')
-    else
-      connection = PG.connect(dbname: 'makersbnb')
-    end
-    connection.exec("INSERT INTO spaces (name, description, price, available_from, available_to) VALUES('#{space_name}','#{space_description}','#{space_price}','#{available_from}','#{available_to}');")
+    conn = set_environment
+    conn.exec("INSERT INTO spaces (name, description, price, available_from, available_to) VALUES('#{space_name}','#{space_description}','#{space_price}','#{available_from}','#{available_to}');")
   end
+
+  def self.filter(available_from:, available_to:)
+    conn = set_environment
+
+    results = conn.exec("SELECT * FROM spaces WHERE available_to BETWEEN '#{available_from}' AND '#{available_to}';")
+
+    results.map do |space|
+      [space['name'], space['description'], space['price'], space['available_from'], space['available_to']]
+    end
+  end
+
 end
