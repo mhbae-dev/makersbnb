@@ -17,7 +17,8 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/' do
-    User.create(params['email_address'], params['password'])
+    user = User.create(params['email_address'], params['password'])
+    session[:user_id] = user.id
     redirect '/'
   end
 
@@ -34,6 +35,7 @@ class MakersBnb < Sinatra::Base
   end
 
   get '/spaces' do
+    @user = User.find(session[:user_id])
     if session[:spaces]
       @spaces = session[:spaces]
     else
@@ -44,24 +46,28 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/spaces' do
-    Space.add(space_name: params[:name],
-    space_description: params[:description],
-    space_price: params[:price_per_night],
-    available_from: params[:available_from],
-    available_to: params[:available_to])
+    Space.add(
+      space_name: params[:name],
+      space_description: params[:description],
+      space_price: params[:price_per_night],
+      available_from: params[:available_from],
+      available_to: params[:available_to],
+    )
 
     redirect '/spaces'
   end
 
   post '/filter' do
-    if params[:available_from] && params[:available_to] 
-      session[:spaces] = Space.filter(available_from: params[:available_from],
-      available_to: params[:available_to])
+    if params[:available_from] && params[:available_to]
+      session[:spaces] =
+        Space.filter(
+          available_from: params[:available_from],
+          available_to: params[:available_to],
+        )
     end
 
     redirect '/spaces'
   end
-
 
   get '/spaces/new' do
     erb(:'spaces/new')
