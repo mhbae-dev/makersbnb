@@ -2,6 +2,7 @@
 
 require 'pg'
 require 'user'
+require 'bcrypt'
 
 describe User do
   describe '.create' do
@@ -10,10 +11,17 @@ describe User do
       result = connection.exec('SELECT * FROM users;')
       result.map { |user| User.new(user['email_address'], user['password']) }
     end
+
     it 'adds a user to the users table in the makersbnb database' do
       User.create('test@testing.com', 'password123')
       expect(users_table[0].email_address).to include 'test@testing.com'
       expect(users_table[0].password).to include 'password123'
+    end
+
+    it 'hashes the password using BCrypt' do
+      expect(BCrypt::Password).to receive(:create).with('password123')
+
+      User.create('test@example.com', 'password123')
     end
   end
 
@@ -23,12 +31,12 @@ describe User do
         User.create('test@testing.com', 'password123')
         User.create('test2@testing.com', 'password456')
       end
-        let(:email_address) { 'test@testing.com' }
-        let(:password) { 'password123' }
-        it 'checks if the form data exists in the users table' do
-          @user = User.new(email_address, password)
-          user_check = User.check(email_address, password)
-          expect(user_check).to be true
+      let(:email_address) { 'test@testing.com' }
+      let(:password) { 'password123' }
+      it 'checks if the form data exists in the users table' do
+        @user = User.new(email_address, password)
+        user_check = User.check(email_address, password)
+        expect(user_check).to be true
       end
     end
 
@@ -37,7 +45,7 @@ describe User do
         User.create('test@testing.com', 'password123')
         User.create('test2@testing.com', 'password456')
       end
-      
+
       let(:email_address) { 'incorrectemail@testing.com' }
       let(:password) { 'incorrectpassword' }
       it 'checks if the form data exists in the users table' do
