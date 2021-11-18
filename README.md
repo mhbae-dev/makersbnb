@@ -58,3 +58,9 @@ Refer to instructions in db/migrations in repo
 
 ## Mockups:
 Mockups for MakersBnB are available [here](https://github.com/makersacademy/course/blob/main/makersbnb/makers_bnb_images/MakersBnB_mockups.pdf).
+
+## filter logic diagram
+![image](https://user-images.githubusercontent.com/75613073/142410388-a7a9a8fe-20c0-462c-9ae7-9668f165340d.png)
+
+
+  
