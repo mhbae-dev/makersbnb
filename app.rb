@@ -76,5 +76,11 @@ class MakersBnb < Sinatra::Base
     erb(:'spaces/new')
   end
 
+  get '/sign-out' do
+    session.clear
+    flash[:notice] = 'You have signed out.'
+    redirect '/login'
+  end
+
   run! if app_file == $PROGRAM_NAME
 end
