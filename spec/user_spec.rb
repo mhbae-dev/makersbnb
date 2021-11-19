@@ -2,6 +2,7 @@
 
 require 'pg'
 require 'user'
+require 'bcrypt'
 
 describe User do
   describe '.create' do
@@ -15,6 +16,11 @@ describe User do
       expect(user).to be_a User
       expect(user.id).to eq users_table[0].id
       expect(user.email_address).to eq users_table[0].email_address
+    end
+
+    it 'encrypts password' do
+      expect(BCrypt::Password).to receive(:create).with('password123')
+      User.create('test@example.com', 'password123')
     end
   end
 
