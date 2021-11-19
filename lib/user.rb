@@ -44,7 +44,7 @@ class User
     else
       conn = PG.connect(dbname: 'makersbnb')
     end
-    result = conn.exec('SELECT * FROM users WHERE id = id;')
+    result = conn.exec("SELECT * FROM users WHERE id = '#{id}';")
     User.new(result[0]['id'], result[0]['email_address'])
   end
 end

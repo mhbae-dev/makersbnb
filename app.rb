@@ -19,7 +19,6 @@ class MakersBnb < Sinatra::Base
 
   post '/' do
     user = User.create(params['email_address'], params['password'])
-    session[:user_id] = user.id
     redirect '/'
   end
 
@@ -33,7 +32,6 @@ class MakersBnb < Sinatra::Base
       session[:user_id] = user.id
       redirect '/spaces'
     else
-      # Rackup works. rspec cant run flash. All feature tests failing.
       flash[:notice] = 'Please check your email or password.'
       redirect '/login'
     end
