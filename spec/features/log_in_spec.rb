@@ -53,4 +53,9 @@ feature 'Log in' do
     expect(page).not_to have_content 'Welcome, test@example.com'
     expect(page).to have_content 'You have signed out.'
   end
+
+  scenario 'user prevented from going to /spaces without loggin in' do
+    visit('/spaces')
+    expect(page).to have_content 'Log in to MakersBnB'
+  end
 end
