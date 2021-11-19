@@ -7,6 +7,12 @@
   <a href="/spaces/new">List a Space</a>
 </div>
 <%# seperator %>
+<div style="text-align: center;font-size: 20px;">
+  <% if @user %>
+    <h1>Welcome, <%= @user.email_address %></h1>
+  <% end %>
+</div>
+<%# seperator %>
 <div>
   <form action="/filter" method="post">
     <label for='available_from'>Available from:
