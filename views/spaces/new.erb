@@ -1,30 +1,37 @@
-<nav style="text-align: right;">
+<link rel="stylesheet" type="text/css" href="/style.css">
+
+<nav class="nav">
   <a href="/spaces">Spaces</a> | <a href="/requests">Requests</a> | <a href="/">Sign out</a>
 </nav>
-<div style="text-align: center;font-size: 20px;">
+<div class="title">
   <h1>List a new space</h1>
 </div>
-<div style="text-align: center;font-size: 20px;border: 1px solid black;padding: 1rem;">
-  <form action="/spaces" method="post">
-    <label for='name'>Name:
+<div class="border-form">
+  <form class="form" action="/spaces" method="post">
+    <label class="label" for='name'>Name:
+    </label>
+    <br>
       <input type="text" name="name" required>
+    <br>
+    <label class="label" for='description'>Description:
     </label>
     <br>
-    <label for='description'>Description:
       <input type="text" name="description" required>
+    <br>
+    <label class="label" for='price_per_night'>Price per night:
     </label>
     <br>
-    <label for='price_per_night'>Price per night:
       <input type="number" step="0.01" name="price_per_night" min="0" required>
+    <br>
+    <label class="label" for='available_from'>Available from:
     </label>
     <br>
-    <label for='available_from'>Available from:
       <input type="date" name="available_from" required>
+    <br>
+    <label class="label" for='available_to'>Available to:
     </label>
     <br>
-    <label for='available_to'>Available to:
       <input type="date" name="available_to" required>
-    </label>
     <br>
     <input style="margin-top: 1rem;" type="submit" value="List my space">
   </form>

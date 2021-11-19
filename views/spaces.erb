@@ -1,20 +1,22 @@
-<nav style="text-align: right;">
-  <a href="/spaces">Spaces</a> | <a href="/requests">Requests</a> | <a href="/sign-out">Sign out</a>
+<link rel="stylesheet" type="text/css" href="/style.css">
+
+<nav class="nav">
+  <a class="link" href="/spaces">Spaces</a> | <a class="link" href="/requests">Requests</a> | <a class="link" href="/sign-out">Sign out</a>
 </nav>
 <%# seperator %>
-<div style="text-align: center;font-size: 20px;">
+<div class="title">
   <h1>Book a Space</h1>
-  <a href="/spaces/new">List a Space</a>
+  <a class="link" href="/spaces/new">List a Space</a>
 </div>
 <%# seperator %>
-<div style="text-align: center;font-size: 20px;">
+<div class="title">
   <% if @user %>
     <h1>Welcome, <%= @user.email_address %></h1>
   <% end %>
 </div>
 <%# seperator %>
-<div style="display: block ruby">
-  <form action="/filter" method="post">
+<div class="calendar-container">
+  <form class="calendar" action="/filter" method="post">
     <label for='available_from'>Available from:
       <input type="date" name="available_from" required>
     </label>
@@ -23,11 +25,11 @@
       <input type="date" name="available_to" required>
     </label>
     <br>
-    <input style="margin-top: 1rem;" type="submit" value="List Space">
+    <input class="button filter_button" type="submit" value="Filter Spaces">
   </form>
 </div>
 <%# seperator %>
-<div style="display: flex">
+<div class="filter-container">
   <%= @msg %>
   <form action="/remove_filter" method="post">
     <input style="margin-left: 1rem;" type="submit" value="Remove Filter">
@@ -35,10 +37,10 @@
 </div>
 <%# seperator %>
 <div>
-  <ul style="list-style: none;">
+  <ul class="list-container">
     <% @spaces.each do |space| %>
       <li>
-        <div style="border: 1px solid black;padding: 1rem;margin-bottom: 1rem;">
+        <div class="list-item-container">
           <h3><%= space[0] %></h3>
           <p><%= space[1] %>, £<%= space[2] %></p>
           <p>Available from: <%= space[3] %>, Available to: <%= space[4] %></p>

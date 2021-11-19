@@ -1,24 +1,28 @@
-<div style="text-align: center;font-size: 20px;">
+<link rel="stylesheet" type="text/css" href="/style.css">
+
+<div class="title">
   <h1>Log in to MakersBnB</h1>
 </div>
 
-<div style="text-align: center;font-size: 20px;">
+<div class="title">
   <h2>
     <%= flash[:notice] %>
   </h2>
 </div>
 
-<div style="text-align: center;font-size: 20px;border: 1px solid black;padding: 1rem;">
-  <form action="/login" method="post">
-    <label for='email_address'>Email Address:
+<div class="border-form">
+  <form class="form" action="/login" method="post">
+    <label class="label" for='email_address'>Email Address:
+    </label>
+    <br>
       <input type="email" name="email_address" required>
+    <br>
+    <label class="label" for='password'>Password:
     </label>
     <br>
-    <label for='password'>Password:
       <input type="password" name="password" required>
-    </label>
     <br>
-    <input type="submit" value="Log in">
+    <input class="button" type="submit" value="Log in">
   </form>
 </div>
 
