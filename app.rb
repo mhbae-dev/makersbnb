@@ -38,11 +38,19 @@ class MakersBnb < Sinatra::Base
   end
 
   get '/spaces' do
-    @user = User.find(session[:user_id])
+    @available_from = session[:available_from]
+    @available_to = session[:available_to]
+
     if session[:spaces]
       @spaces = session[:spaces]
+      @msg = if @spaces == Space.all
+          'Showing all available spaces'
+        else
+          "Showing spaces available from: #{@available_from} and available to: #{@available_to}"
+        end
     else
       @spaces = Space.all
+      @msg = 'Showing all available spaces'
     end
 
     erb(:spaces)
@@ -62,12 +70,17 @@ class MakersBnb < Sinatra::Base
 
   post '/filter' do
     if params[:available_from] && params[:available_to]
-      session[:spaces] =
-        Space.filter(
-          available_from: params[:available_from],
-          available_to: params[:available_to],
-        )
+      session[:available_from] = params[:available_from]
+      session[:available_to] = params[:available_to]
+
+      session[:spaces] = Space.filter(available_from: params[:available_from], available_to: params[:available_to])
     end
+
+    redirect '/spaces'
+  end
+
+  post '/remove_filter' do
+    session[:spaces] = Space.all if session[:spaces]
 
     redirect '/spaces'
   end

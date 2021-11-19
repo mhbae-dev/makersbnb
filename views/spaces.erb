@@ -13,7 +13,7 @@
   <% end %>
 </div>
 <%# seperator %>
-<div>
+<div style="display: block ruby">
   <form action="/filter" method="post">
     <label for='available_from'>Available from:
       <input type="date" name="available_from" required>
@@ -24,6 +24,13 @@
     </label>
     <br>
     <input style="margin-top: 1rem;" type="submit" value="List Space">
+  </form>
+</div>
+<%# seperator %>
+<div style="display: flex">
+  <%= @msg %>
+  <form action="/remove_filter" method="post">
+    <input style="margin-left: 1rem;" type="submit" value="Remove Filter">
   </form>
 </div>
 <%# seperator %>
