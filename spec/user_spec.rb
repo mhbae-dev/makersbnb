@@ -45,6 +45,12 @@ describe User do
 
         expect(User.check('incorrect@example.com', 'password123')).to be_nil
       end
+
+      it 'returns nil given an incorrect password' do
+        user = User.create('test@testing.com', 'password123')
+
+        expect(User.check('test@example.com', 'incorrectpass')).to be_nil
+      end
     end
   end
 end
