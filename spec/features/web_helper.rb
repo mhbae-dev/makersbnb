@@ -10,6 +10,20 @@ def add_two_spaces_and_visit_spaces_page
 
 end
 
+def sign_up
+  visit('/')
+  fill_in 'email_address', with: 'test@example.com'
+  fill_in 'password', with: 'password123'
+  click_button 'Sign up'
+end
+
+def login
+  visit('/login')
+  fill_in 'email_address', with: 'test@example.com'
+  fill_in 'password', with: 'password123'
+  click_button 'Log in'
+end
+
 def fill_in_filter_dates_and_submit
   # ask for whole year availability
   fill_in 'available_from', with: "2021-01-01"

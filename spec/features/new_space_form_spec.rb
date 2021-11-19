@@ -1,12 +1,17 @@
 # frozen_string_literal: true
+require 'web_helper'
 
 feature 'New space form' do
   scenario 'Displays some content' do
+    sign_up
+    login
     visit('/spaces/new')
     expect(page).to have_content 'List a new space'
   end
 
   scenario 'Displays a form' do
+    sign_up
+    login
     visit('/spaces/new')
     expect(page).to have_button 'List my space'
     expect(page).to have_field 'name'
@@ -17,6 +22,8 @@ feature 'New space form' do
   end
 
   scenario 'Updates database with space once form is submitted' do
+    sign_up
+    login
     visit('/spaces/new')
     fill_in 'name', with: 'Tent'
     fill_in 'description', with: '8 person tent in field'

@@ -13,6 +13,12 @@ class MakersBnb < Sinatra::Base
     register Sinatra::Flash
   end
 
+  def must_be_logged_in
+    if !session[:user_id]
+      redirect '/login'
+    end
+  end
+
   get '/' do
     erb(:sign_up)
   end
@@ -38,6 +44,8 @@ class MakersBnb < Sinatra::Base
   end
 
   get '/spaces' do
+    must_be_logged_in
+    @user = User.find(session[:user_id])
     @available_from = session[:available_from]
     @available_to = session[:available_to]
 
@@ -86,10 +94,12 @@ class MakersBnb < Sinatra::Base
   end
 
   get '/spaces/new' do
+    must_be_logged_in
     erb(:'spaces/new')
   end
 
   get '/sign-out' do
+    must_be_logged_in
     session.clear
     flash[:notice] = 'You have signed out.'
     redirect '/login'

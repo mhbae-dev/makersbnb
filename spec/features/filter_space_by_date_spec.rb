@@ -4,6 +4,8 @@ require_relative'./web_helper.rb'
 feature 'filter' do
 
   scenario 'initially shows all spaces and let the user know' do
+    sign_up
+    login
     add_two_spaces_and_visit_spaces_page
 
     expect(page).to have_content 'Showing all available spaces'
@@ -19,6 +21,8 @@ feature 'filter' do
   end
 
   scenario 'only shows spaces within date range' do
+    sign_up
+    login
     add_two_spaces_and_visit_spaces_page
 
     fill_in_filter_dates_and_submit
@@ -37,6 +41,8 @@ feature 'filter' do
   end
 
   scenario 'removes filter when click on remove filter button' do
+    sign_up
+    login
     add_two_spaces_and_visit_spaces_page
 
     fill_in_filter_dates_and_submit
