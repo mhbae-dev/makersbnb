@@ -1,15 +1,14 @@
 # frozen_string_literal: true
 
+require 'sinatra/flash'
 require 'sinatra/base'
 require 'sinatra/reloader'
-require 'sinatra/flash'
 require './lib/space'
 require './lib/user'
 
 class MakersBnb < Sinatra::Base
-  enable :sessions
-
-  configure :development do
+  configure :development, :test do
+    enable :sessions
     register Sinatra::Reloader
     register Sinatra::Flash
   end
